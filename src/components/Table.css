@@ -1,0 +1,9 @@
+.Table{
+    border-collapse:collapse;
+    width: 70%;
+}
+.Table th, td{
+    border: 1px solid;
+    padding: 10px 5px;
+    height: 20px;
+}

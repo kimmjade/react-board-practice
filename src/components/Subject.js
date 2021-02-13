@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Subject extends Component{
     render(){
         return(
             <header>
-            <h1>게시판</h1>
+            <h1><Link to="/">게시판</Link></h1>
             </header>
         );
     }
