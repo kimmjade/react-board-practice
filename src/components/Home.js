@@ -5,10 +5,7 @@ class Home extends Component{
     render(){
         return(
             <NoticeList 
-            id={this.props.id}
-            title={this.props.title}
-            writer={this.props.writer}
-            date={this.props.date}
+            data={this.props.data}
             ></NoticeList>
         );
     }

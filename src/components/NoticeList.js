@@ -4,6 +4,17 @@ import {Link} from 'react-router-dom';
 
 class NoticeList extends Component{
     render(){
+        var noticelists=[];
+        var data=this.props.data;
+        var i=0;
+        while(i<data.length){
+            noticelists.push(
+                <tr><td>{data[i].id}</td>
+                <td><Link to="/notice">{data[i].title}</Link></td>
+                <td>{data[i].writer}</td>
+                <td>{data[i].date}</td></tr>);
+            i++;
+        }
         return(
             <div>
             <table className="Table">
@@ -16,14 +27,7 @@ class NoticeList extends Component{
                     </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>{this.props.id}</td>
-                    <td>
-                        <Link to="/notice">{this.props.title}</Link>
-                    </td>
-                    <td>{this.props.writer}</td>
-                    <td>{this.props.date}</td>
-                </tr>
+                    {noticelists}
                 </tbody>
             </table>
             </div>

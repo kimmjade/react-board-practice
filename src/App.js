@@ -7,13 +7,20 @@ import Home from './components/Home';
 import './App.css';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-const notices=[
+var notices=[
   {
     'id':1,
     'title':'휴강공지',
     'writer': '김교수',
     'date':'21/02/01',
     'desc': '내일수업 휴강입니다.'
+  },
+  {
+    'id':2,
+    'title':'시험공지',
+    'writer':'박땡땡',
+    'date':'21/02/14',
+    'desc':'시험은 다음주입니다.'
   }
 ]
 
@@ -26,18 +33,12 @@ class App extends Component {
       <Bar></Bar>
         <Route exact path="/">
           <Home
-          id={notices[0].id}
-          title={notices[0].title}
-          writer={notices[0].writer}
-          date={notices[0].date}>
+          data={notices}>
           </Home>
         </Route>
         <Route exact path="/noticelist">
           <NoticeList
-            id={notices[0].id}
-            title={notices[0].title}
-            writer={notices[0].writer}
-            date={notices[0].date}>
+            data={notices}>
           </NoticeList>
         </Route>
         <Route path="/notice">
