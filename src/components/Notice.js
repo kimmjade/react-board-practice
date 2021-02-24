@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React,{Component} from 'react';
 
 class Notice extends Component{
     render(){
+        const {params}=this.props.match;
+        var id=params.notice_id;
+        var data=this.props.data;
         return(
-            <content>
-                <h2>바뀜</h2>
-                <p>바뀜</p>
-                <Link to="/noticelist"><input type="button" value="목록"></input></Link>
-            </content>
+            <div>
+            <h1>{data[id-1].title}</h1>
+            <p>작성자 {data[id-1].writer}</p>
+            <p>{data[id-1].desc}</p>
+            </div>
         );
     }
 }

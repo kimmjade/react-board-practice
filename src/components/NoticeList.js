@@ -10,7 +10,9 @@ class NoticeList extends Component{
         while(i<data.length){
             noticelists.push(
                 <tr key={data[i].id}><td>{data[i].id}</td>
-                <td><Link to="/notice">{data[i].title}</Link></td>
+                <td>
+                    <Link to={"/notice/"+data[i].id}>{data[i].title}</Link>
+                </td>
                 <td>{data[i].writer}</td>
                 <td>{data[i].date}</td></tr>);
             i++;

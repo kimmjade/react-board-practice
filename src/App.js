@@ -41,8 +41,7 @@ class App extends Component {
             data={notices}>
           </NoticeList>
         </Route>
-        <Route path="/notice">
-          <Notice></Notice>
+        <Route path="/notice/:notice_id" render={(props)=><Notice data={notices} {...props}/>}>
         </Route>
     </BrowserRouter>
     </div>
