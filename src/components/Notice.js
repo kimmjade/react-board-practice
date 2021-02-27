@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import '../style/Notice.css';
 
 class Notice extends Component{
     render(){
@@ -8,10 +9,25 @@ class Notice extends Component{
         var data=this.props.data;
         return(
             <div>
-            <h1>{data[id-1].title}</h1>
-            <p>작성자 {data[id-1].writer}</p>
-            <p>{data[id-1].desc}</p>
-            <Link to='/noticelist'><input type="button" value="목록"></input></Link>
+            <h2>공지사항</h2>
+            <table class="contents">
+                <thead>
+                    <tr>
+                        <th colspan="3">{data[id-1].title}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>작성자 {data[id-1].writer}</td>
+                        <td>{data[id-1].date}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">{data[id-1].desc}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <Link to='/noticelist'><input type="button" value="목록" class="btn"></input></Link>
             </div>
         );
     }

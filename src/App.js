@@ -18,7 +18,7 @@ var notices=[
   {
     'id':2,
     'title':'시험공지',
-    'writer':'박땡땡',
+    'writer':'박교수',
     'date':'21/02/14',
     'desc':'시험은 다음주입니다.'
   }
@@ -37,11 +37,12 @@ class App extends Component {
           </Home>
         </Route>
         <Route exact path="/noticelist">
+          <h2>공지사항</h2>
           <NoticeList
             data={notices}>
           </NoticeList>
         </Route>
-        <Route path="/notice/:notice_id" render={(props)=><Notice data={notices} {...props}/>}>
+        <Route path="/noticelist/notice/:notice_id" render={(props)=><Notice data={notices} {...props}/>}>
         </Route>
     </BrowserRouter>
     </div>

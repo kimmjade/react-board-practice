@@ -1,0 +1,27 @@
+ul{
+    list-style: none;
+    margin: 15px;
+    padding: 15px;
+    text-align:center;
+    border-bottom: 1px solid;
+    background-color: #dcdcdc;
+}
+li{
+    margin: 5px 0px 5px 0px;
+    padding: 0px 40px 0px 40px;
+    display: inline-block;
+    border-left: 1px solid;
+    font-weight: bold;
+}
+li:first-child{
+    border-left: none;
+}
+.nav{
+    text-decoration: none;
+    color: black;
+}
+.active{
+    text-decoration: none;
+    background-color: beige;
+    color: black;
+}

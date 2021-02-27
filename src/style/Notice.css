@@ -1,0 +1,21 @@
+.contents{
+    border-collapse: collapse;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.contents th{
+    border: 1px solid;
+    padding: 10px 5px;
+    background-color: white;
+    text-align: left;
+}
+.contents td{
+    border: 1px solid;
+    padding: 10px 5px;
+    background-color: white;
+}
+.btn{
+    margin-left: 105px;
+}

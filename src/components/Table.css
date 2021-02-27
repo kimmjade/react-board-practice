@@ -1,9 +1,24 @@
 .Table{
-    border-collapse:collapse;
+    border-collapse: collapse;
     width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
 }
-.Table th, td{
-    border: 1px solid;
+.Table th{
+    border-top: 1.5px solid;
+    border-bottom: 1px solid;
     padding: 10px 5px;
-    height: 20px;
+    height: 10px;
+    background-color: whitesmoke;
+}
+.Table td{
+    border-bottom: 1px solid;
+    padding: 10px 5px;
+    height: 10px;
+    background-color: white;
+    text-align: center;
+}
+caption{
+    text-align: left;
 }

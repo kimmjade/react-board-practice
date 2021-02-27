@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Table.css';
+import './Notice';
 import {Link} from 'react-router-dom';
 
 class NoticeList extends Component{
@@ -11,7 +12,7 @@ class NoticeList extends Component{
             noticelists.push(
                 <tr key={data[i].id}><td>{data[i].id}</td>
                 <td>
-                    <Link to={"/notice/"+data[i].id}>{data[i].title}</Link>
+                    <Link to={"/noticelist/notice/"+data[i].id}>{data[i].title}</Link>
                 </td>
                 <td>{data[i].writer}</td>
                 <td>{data[i].date}</td></tr>);
@@ -20,6 +21,7 @@ class NoticeList extends Component{
         return(
             <div>
             <table className="Table">
+                <caption>공지사항</caption>
                 <thead>
                     <tr>
                         <th>번호</th>

@@ -1,0 +1,10 @@
+.main{
+    font-size: 35px;
+    font-family: serif;
+    text-align: center;
+    margin: 40px;
+}
+.none{
+    text-decoration: none;
+    color: black;
+}
